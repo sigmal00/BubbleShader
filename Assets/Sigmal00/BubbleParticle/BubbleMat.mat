@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BubbleMat
+  m_Shader: {fileID: 4800000, guid: d2d440e91610d824dbf1cb35874ad22a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _EmissiveStrength: 0.4
+    - _Freq: 2
+    - _FresnelExp: 4
+    - _FresnelPower: 3
+    - _Glossiness: 0.5
+    - _InverseMask: 0
+    - _MaxOpacity: 1
+    - _Metallic: 1
+    - _MinOpacity: 0.02
+    - _NoiseFreq: 1.5
+    - _NoiseFreq1: 1.5
+    - _NoiseFreq2: 3
+    - _NoiseFreq3: 7.4
+    - _NoiseFrequency: 1.5
+    - _NoiseScale: 0.4
+    - _NoiseScroll: 1
+    - _NoiseStrength: 0.6
+    - _Power: 0.2
+    - _Smoothness: 1
+    - _StructuralColorScale: 0.2
+    - _StructuralColorStrength: 0.4
+    - _TransAmbient: 0
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0.1
+    - _TransScattering: 1
+    - _TransShadow: 0.912
+    - _Translucency: 50
+    - _WaveNoiseFreq: 0.8
+    - _WaveNoiseScroll: 8
+    - _WaveNoiseStrength: 0.08
+    - _WaveThresholdSize: 0.03
+    - _WaveThresholdSizeGradient: 0.1
+    - __dirty: 0
+    m_Colors:
+    - _BaseColor: {r: 0.8160377, g: 0.9213652, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.5137253, b: 1, a: 1}
+    - _StructuralColor: {r: 0, g: 0.2521739, b: 1, a: 1}
