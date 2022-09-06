@@ -31,6 +31,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TransformMap:
+        m_Texture: {fileID: 8400000, guid: d04c2b31bd487d4489f95a7d1728f062, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _EmissiveStrength: 0.4
     - _Freq: 2

@@ -37,6 +37,9 @@ Shader "Sigmal00/BubbleShader"
 		_WaveThresholdSize("Wave Threshold Size", Float) = 0.02
 		_WaveThresholdSizeGradient("Wave Threshold Size Gradient", Float) = 0.1
 
+		[Header(General Settings)]
+		[Space(8)]
+        _TransformMap ("Transform Map", 2D) = "black" {}
 	}
 
 	SubShader
@@ -72,6 +75,8 @@ Shader "Sigmal00/BubbleShader"
 		uniform float _WaveNoiseStrength, _WaveNoiseFreq, _WaveNoiseScroll, _WaveThresholdSize, _WaveThresholdSizeGradient;
 
 		uniform float _NoiseStrength, _NoiseFreq, _NoiseScroll;
+
+		uniform sampler2D _TransformMap;
 
 		float3 HSVToRGB( float3 c )
 		{
@@ -184,6 +189,9 @@ Shader "Sigmal00/BubbleShader"
 			float alphaMask = tex2D (_MaskTex, i.uv_BaseTex).r;
 			if(_InverseMask == 1) alphaMask = saturate(1.0f - alphaMask);
 
+			float3 objPos = mul(unity_WorldToObject, float4(i.worldPos, 1.0f));
+			objPos += 0.1f;
+
 			if(alphaMask <= 0.0f) discard;
 
 			float4 baseColor = tex2D (_BaseTex, i.uv_BaseTex)*_BaseColor;
@@ -193,7 +201,6 @@ Shader "Sigmal00/BubbleShader"
 			#endif
 
 			// 構造色
-			float3 objPos = mul(unity_WorldToObject, float4(i.worldPos, 1.0f));
 			float noiseValue = _NoiseStrength * domainWarp(_NoiseFreq * objPos + float3(0, _NoiseScroll*_Time.x, 0));
 
 			float3 hsv = float3(0.5f, 0.95f, 1.0f);
